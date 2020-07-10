@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            border: none;
+            padding: 2px;
+            width: 150px;
+        }
+        .but {
+            background-color: blueviolet;
+        }
+        #result {
+            text: blue;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td><h3>Amount</h3></td>
+        <td><h3>From Currency</h3></td>
+        <td><h3>To Currency</h3></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" name="" id="tien">
+        </td>
+        <td>
+            <select name="" id="">
+                <option value="1">VietNam</option>
+            </select>
+        </td>
+        <td>
+            <select name="" id="">
+                <option value="1">USD</option>
+                <option value="2">EUR</option>
+                <option value="3">GBP</option>
+            </select>
+        </td>
+        <td><input class= "but" type="button" value="Convert" onclick="getmoney()"></td>
+    </tr>
+    <tr>
+        <td>
+            <p class="color:blue;">Result:</p>
+        </td>
+        <td id="result">
+
+        </td>
+    </tr>
+</table>
+<script !src="">
+function getmoney() {
+    const exchange_rate = 23300;
+    let m = parseInt(document.getElementById("tien").value);
+    t = m / exchange_rate;
+   document.getElementById("result").innerHTML = t;
+}
+</script>
+</body>
+</html>
