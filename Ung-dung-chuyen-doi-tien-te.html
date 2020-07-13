@@ -27,18 +27,20 @@
     </tr>
     <tr>
         <td>
-            <input type="text" name="" id="tien">
+            <input type="text" name="" id="money">
         </td>
         <td>
-            <select name="" id="">
-                <option value="1">VietNam</option>
+            <select name="" id="from">
+                <option value="1">USD</option>
+                <option value="23300">VietNam</option>
+                <option value="0.87">EUR</option>
             </select>
         </td>
         <td>
-            <select name="" id="">
+            <select name="" id="to">
                 <option value="1">USD</option>
-                <option value="2">EUR</option>
-                <option value="3">GBP</option>
+                <option value="23300">VietNam</option>
+                <option value="0.87">EUR</option>
             </select>
         </td>
         <td><input class= "but" type="button" value="Convert" onclick="getmoney()"></td>
@@ -52,12 +54,15 @@
         </td>
     </tr>
 </table>
-<script !src="">
+<script>
 function getmoney() {
-    const exchange_rate = 23300;
-    let m = parseInt(document.getElementById("tien").value);
-    t = m / exchange_rate;
-   document.getElementById("result").innerHTML = t;
+    // const exchange_rate = 23300;
+    let m = parseFloat(document.getElementById("money").value);
+    let f = parseFloat(document.getElementById("from").value);
+    let t = parseFloat(document.getElementById("to").value);
+    // debugger
+    r = (m*t)/f;
+   document.getElementById("result").innerHTML = r;
 }
 </script>
 </body>
